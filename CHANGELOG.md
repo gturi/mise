@@ -1,5 +1,11 @@
 # Changelog
 
+## [2025.1.6](https://github.com/jdx/mise/compare/v2025.1.5..v2025.1.6) - 2025-01-12
+
+### 🐛 Bug Fixes
+
+- Panic when run without arguments with bootstrapped script by [@jdx](https://github.com/jdx) in [#4065](https://github.com/jdx/mise/pull/4065)
+
 ## [2025.1.5](https://github.com/jdx/mise/compare/v2025.1.4..v2025.1.5) - 2025-01-11
 
 ### 🚀 Features
