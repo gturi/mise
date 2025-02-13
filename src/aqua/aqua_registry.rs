@@ -3,12 +3,13 @@ use crate::backend::aqua;
 use crate::backend::aqua::{arch, os};
 use crate::config::SETTINGS;
 use crate::duration::{DAILY, WEEKLY};
-use crate::git::Git;
+use crate::git::{CloneOptions, Git};
 use crate::{dirs, file, hashmap, http};
 use expr::{Context, Parser, Program, Value};
 use eyre::{eyre, ContextCompat, Result};
 use indexmap::IndexSet;
 use itertools::Itertools;
+use regex::Regex;
 use serde_derive::Deserialize;
 use std::cmp::PartialEq;
 use std::collections::HashMap;
@@ -175,7 +176,7 @@ impl AquaRegistry {
             fetch_latest_repo(&repo)?;
         } else if let Some(aqua_registry_url) = &SETTINGS.aqua.registry_url {
             info!("cloning aqua registry to {path:?}");
-            repo.clone(aqua_registry_url, None)?;
+            repo.clone(aqua_registry_url, CloneOptions::default())?;
             repo_exists = true;
         }
         Ok(Self { path, repo_exists })
@@ -391,7 +392,8 @@ impl AquaPackage {
     }
 
     fn expr_parser(&self, v: &str) -> Parser {
-        let ver = versions::Versioning::new(v.strip_prefix('v').unwrap_or(v));
+        let prefix = Regex::new(r"^[^0-9.]+").unwrap();
+        let ver = versions::Versioning::new(prefix.replace(v, ""));
         let mut expr = Parser::new();
         expr.add_function("semver", move |c| {
             if c.args.len() != 1 {

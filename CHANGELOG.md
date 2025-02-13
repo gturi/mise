@@ -1,5 +1,76 @@
 # Changelog
 
+## [2025.2.3](https://github.com/jdx/mise/compare/v2025.2.2..v2025.2.3) - 2025-02-09
+
+## [2025.2.2](https://github.com/jdx/mise/compare/v2025.2.1..v2025.2.2) - 2025-02-08
+
+### 🚀 Features
+
+- **(registry)** add jd by [@risu729](https://github.com/risu729) in [#4318](https://github.com/jdx/mise/pull/4318)
+- **(registry)** add jc by [@risu729](https://github.com/risu729) in [#4317](https://github.com/jdx/mise/pull/4317)
+- **(registry)** Add qsv cli by [@vjda](https://github.com/vjda) in [#4334](https://github.com/jdx/mise/pull/4334)
+- add support for idiomatic go.mod file by [@roele](https://github.com/roele) in [#4312](https://github.com/jdx/mise/pull/4312)
+- add -g short version for unuse cmd by [@kimle](https://github.com/kimle) in [#4330](https://github.com/jdx/mise/pull/4330)
+- add git remote task provider by [@acesyde](https://github.com/acesyde) in [#4233](https://github.com/jdx/mise/pull/4233)
+- set usage arguments and flags as environment variables for toml tasks by [@gturi](https://github.com/gturi) in [#4159](https://github.com/jdx/mise/pull/4159)
+
+### 🐛 Bug Fixes
+
+- **(aqua)** trim prefix before comparing versions by [@risu729](https://github.com/risu729) in [#4340](https://github.com/jdx/mise/pull/4340)
+- wrong config file type for rust-toolchain.toml files by [@roele](https://github.com/roele) in [#4321](https://github.com/jdx/mise/pull/4321)
+
+### 🚜 Refactor
+
+- **(registry)** use aqua for yq by [@scop](https://github.com/scop) in [#4326](https://github.com/jdx/mise/pull/4326)
+
+### 📚 Documentation
+
+- **(schema)** fix description of task.dir default by [@risu729](https://github.com/risu729) in [#4324](https://github.com/jdx/mise/pull/4324)
+- Add PowerShell example by [@jahanson](https://github.com/jahanson) in [#3857](https://github.com/jdx/mise/pull/3857)
+- Include "A Mise guide for Swift developers" by [@pepicrft](https://github.com/pepicrft) in [#4329](https://github.com/jdx/mise/pull/4329)
+- Update documentation for core tools by [@hverlin](https://github.com/hverlin) in [#4341](https://github.com/jdx/mise/pull/4341)
+- Update vitepress to fix search by [@hverlin](https://github.com/hverlin) in [#4342](https://github.com/jdx/mise/pull/4342)
+
+### Chore
+
+- **(bun.lock)** migrate bun lockfiles to text-based by [@risu729](https://github.com/risu729) in [#4319](https://github.com/jdx/mise/pull/4319)
+
+### New Contributors
+
+- @vjda made their first contribution in [#4334](https://github.com/jdx/mise/pull/4334)
+- @kimle made their first contribution in [#4330](https://github.com/jdx/mise/pull/4330)
+- @pepicrft made their first contribution in [#4329](https://github.com/jdx/mise/pull/4329)
+- @jahanson made their first contribution in [#3857](https://github.com/jdx/mise/pull/3857)
+
+## [2025.2.1](https://github.com/jdx/mise/compare/v2025.2.0..v2025.2.1) - 2025-02-03
+
+### Chore
+
+- fix winget releaser job by [@jdx](https://github.com/jdx) in [e67c653](https://github.com/jdx/mise/commit/e67c653de35ff83d4ee280bf5cb2381741a2108e)
+
+## [2025.2.0](https://github.com/jdx/mise/compare/v2025.1.17..v2025.2.0) - 2025-02-02
+
+### 🚀 Features
+
+- **(registry)** add kwokctl by [@mangkoran](https://github.com/mangkoran) in [#4282](https://github.com/jdx/mise/pull/4282)
+- add biome to registry by [@kit494way](https://github.com/kit494way) in [#4283](https://github.com/jdx/mise/pull/4283)
+- add gittool/gitversion by [@acesyde](https://github.com/acesyde) in [#4289](https://github.com/jdx/mise/pull/4289)
+
+### 📚 Documentation
+
+- add filtering support to registry docs page by [@roele](https://github.com/roele) in [#4285](https://github.com/jdx/mise/pull/4285)
+- improve registry filtering performance by [@roele](https://github.com/roele) in [#4287](https://github.com/jdx/mise/pull/4287)
+- fix registry table rendering for mobile by [@roele](https://github.com/roele) in [#4288](https://github.com/jdx/mise/pull/4288)
+
+### Chore
+
+- updated deps by [@jdx](https://github.com/jdx) in [#4290](https://github.com/jdx/mise/pull/4290)
+- do not run autofix on renovate PRs by [@jdx](https://github.com/jdx) in [41c5ce4](https://github.com/jdx/mise/commit/41c5ce4c6581f856bf0d756e3fe99ec2fae2e7bd)
+
+### New Contributors
+
+- @ELLIOTTCABLE made their first contribution in [#4280](https://github.com/jdx/mise/pull/4280)
+
 ## [2025.1.17](https://github.com/jdx/mise/compare/v2025.1.16..v2025.1.17) - 2025-01-31
 
 ### 🚀 Features

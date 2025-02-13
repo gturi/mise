@@ -646,7 +646,7 @@ fluttergen.backends = [
     "asdf:FlutterGen/asdf-fluttergen"
 ]
 fluttergen.os = ["linux", "macos"]
-fluttergen.test = ["fluttergen --version", "FlutterGen v{{version}}"]
+fluttergen.test = ["fluttergen --version", "v{{version}}"]
 flux2.backends = ["aqua:fluxcd/flux2", "asdf:tablexi/asdf-flux2"]
 flux2.test = ["flux --version", "flux version {{version}}"]
 fly.backends = [
@@ -727,6 +727,7 @@ gitsign.os = ["linux", "macos"]
 gitsign.test = ["gitsign --version", "gitsign version v{{version}}"]
 gitu.backends = ["ubi:altsem/gitu", "cargo:gitu"]
 gitui.backends = ["aqua:extrawurst/gitui", "asdf:looztra/asdf-gitui"]
+gitversion.backends = ["aqua:gittools/gitversion", "ubi:gittools/gitversion"]
 glab.backends = ["asdf:mise-plugins/mise-glab"]
 gleam.backends = ["aqua:gleam-lang/gleam", "asdf:asdf-community/asdf-gleam"]
 # gleam.test = ["gleam --version", "gleam {{version}}"] reporting wrong version
@@ -924,6 +925,14 @@ istioctl.test = ["istioctl version", "{{version}}"]
 janet.backends = ["asdf:mise-plugins/mise-janet"]
 java.backends = ["core:java"]
 jbang.backends = ["asdf:mise-plugins/jbang-asdf"]
+jc.backends = ["aqua:kellyjonbrazil/jc", "ubi:kellyjonbrazil/jc", "pipx:jc"]
+jc.test = ["jc --version", "jc version:  {{version}}"]
+jd.backends = [
+    "aqua:josephburnett/jd",
+    "ubi:josephburnett/jd",
+    "go:github.com/josephburnett/jd"
+]
+jd.test = ["jd --version", "jd version {{version}}"]
 jfrog-cli.backends = ["asdf:mise-plugins/mise-jfrog-cli"]
 jib.backends = ["asdf:mise-plugins/mise-jib"]
 jib.test = ["jib --version", "{{version}}"]
@@ -1434,6 +1443,8 @@ purescript.backends = [
 purty.backends = ["asdf:mise-plugins/mise-purty"]
 python.backends = ["core:python"]
 qdns.backends = ["ubi:natesales/q", "asdf:moritz-makandra/asdf-plugin-qdns"]
+qsv.backends = ["ubi:dathere/qsv", "asdf:vjda/asdf-qsv"]
+qsv.test = ["qsv --version", "qsv {{version}}"]
 quarkus.backends = ["asdf:mise-plugins/mise-quarkus"]
 r.backends = ["asdf:mise-plugins/mise-r"]
 rabbitmq.backends = ["asdf:mise-plugins/mise-rabbitmq"]
@@ -1869,7 +1880,12 @@ yazi.test = [
 yj.backends = ["ubi:sclevine/yj", "asdf:ryodocx/asdf-yj"]
 yor.backends = ["aqua:bridgecrewio/yor", "asdf:ordinaryexperts/asdf-yor"]
 youtube-dl.backends = ["asdf:mise-plugins/mise-youtube-dl"]
-yq.backends = ["ubi:mikefarah/yq", "asdf:sudermanjr/asdf-yq"]
+yq.backends = [
+    "aqua:mikefarah/yq",
+    "ubi:mikefarah/yq",
+    "asdf:sudermanjr/asdf-yq"
+]
+yq.test = ["yq --version", "version v{{version}}"]
 yt-dlp.backends = ["ubi:yt-dlp/yt-dlp", "asdf:duhow/asdf-yt-dlp"]
 ytt.backends = ["aqua:carvel-dev/ytt", "asdf:vmware-tanzu/asdf-carvel"]
 zbctl.backends = ["asdf:mise-plugins/mise-zbctl"]
